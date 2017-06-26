@@ -29,9 +29,25 @@ function random_base(){
 	var index = Math.floor(Math.random() * 4);
 	return bases[index];
 }
+
+function print_sequences(){
+	for(var i = 0;i < number_of_sequences;i = i + 1){
+		print_sequence(sequences[i]);
+	}
+
+}
+
+function print_sequence(sequence){
+	var sequence_string = "";
+	for(var i = 0; i < sequence.length;i = i + 1){
+	sequence_string = sequence_string + sequence[i];
+	}
+	console.log(sequence_string);
+
+}
 	
 generate_first_generation();
-
+print_sequences();
 	
 
 </script>
