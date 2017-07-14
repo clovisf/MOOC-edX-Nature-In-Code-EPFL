@@ -201,7 +201,13 @@ function print_data(){
 		}
 	}
 	console.log("generation " + generation_counter + ":");	
-	console.log(a1a1, a1a2, a2a2);	
+	console.log(a1a1, a1a2, a2a2);		
+	var N = a1a1 + a1a2 + a2a2;
+	var h_o = a1a2 / N;
+	var p = ((2 * a1a1) + a1a2) / (2 * N);
+	var h_e = 2 * p * (1 - p);
+	var F = (h_e - h_o) / h_e;
+	console.log("F = " + F);
 }
 
 function run_generation(){
